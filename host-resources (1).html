@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Host Resources | Happy Places STR Essentials</title>
+<meta name="description" content="The short-term rental essentials we actually use in our own properties. Curated gear for hosts, from smart locks to linens to the little touches that earn five-star reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#F4EFE6;--sand-deep:#E7DCC8;--pine:#183A2E;--pine-deep:#0F281F;
+    --clay:#C06B3E;--clay-soft:#D89066;--gold:#C6A15B;--ink:#1E1A15;--ink-soft:#5B534A;
+    --paper:#FCFAF5;--line:#DDD4C4;--maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Instrument Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-0.015em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .btn{display:inline-block;font-weight:600;font-size:1rem;padding:15px 30px;border-radius:2px;transition:transform .15s,background .2s,color .2s;cursor:pointer;border:none;font-family:inherit}
+  .btn-primary{background:var(--clay);color:#fff}
+  .btn-primary:hover{background:var(--clay-soft)}
+
+  header{position:sticky;top:0;z-index:100;background:rgba(251,248,242,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:var(--pine);letter-spacing:-0.02em}
+  .brand svg{width:30px;height:30px;flex:none}
+  .navlinks{display:flex;align-items:center;gap:34px}
+  .navlinks a{font-size:.97rem;font-weight:500;color:var(--ink-soft);transition:color .15s}
+  .navlinks a:hover{color:var(--pine)}
+  .navlinks .navcta{color:var(--clay);font-weight:600}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+  .menu-btn span{width:24px;height:2px;background:var(--pine);display:block}
+
+  .page-hero{background:var(--pine);color:var(--sand);padding:70px 0 64px}
+  .page-hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.86rem;font-weight:600;color:var(--clay-soft);margin-bottom:20px}
+  .page-hero .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--clay-soft)}
+  .page-hero h1{font-size:clamp(2.4rem,4.4vw,3.5rem);color:#fff;margin-bottom:20px;max-width:16ch}
+  .page-hero p{font-size:1.18rem;color:rgba(243,237,226,0.85);max-width:56ch}
+
+  .disclosure{background:var(--sand-deep);color:var(--ink-soft);font-size:.9rem;padding:14px 0}
+  .disclosure .wrap{display:flex;gap:10px;align-items:center}
+  .disclosure svg{width:18px;height:18px;flex:none;color:var(--clay)}
+
+  main{padding:76px 0 90px}
+  .cat{margin-bottom:64px}
+  .cat-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;padding-bottom:16px;border-bottom:2px solid var(--pine)}
+  .cat-head h2{font-size:1.7rem;color:var(--pine)}
+  .cat-head span{font-size:.95rem;color:var(--ink-soft)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 16px 34px rgba(31,71,57,0.1);transform:translateY(-3px)}
+  .card-img{aspect-ratio:4/3;background:var(--sand);overflow:hidden;border-bottom:1px solid var(--line)}
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .card:hover .card-img img{transform:scale(1.05)}
+  .card-body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .card h4{font-size:1.14rem;color:var(--pine);margin-bottom:8px}
+  .card p{font-size:.95rem;color:var(--ink-soft);margin-bottom:18px;flex:1}
+  .card .amz{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--pine);color:#fff;font-weight:600;font-size:.95rem;padding:11px 18px;border-radius:2px;transition:background .2s}
+  .card .amz:hover{background:var(--pine-deep)}
+  .card .amz svg{width:16px;height:16px}
+
+  .backcta{background:var(--sand);text-align:center;padding:64px 0}
+  .backcta h3{font-size:1.9rem;color:var(--pine);margin-bottom:14px}
+  .backcta p{color:var(--ink-soft);font-size:1.08rem;margin-bottom:26px;max-width:48ch;margin-left:auto;margin-right:auto}
+
+  footer{background:var(--pine-deep);color:var(--sand);padding:50px 0 30px}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:rgba(243,237,226,0.6);flex-wrap:wrap;gap:12px}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;color:#fff}
+  .foot-brand svg{width:26px;height:26px}
+
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){
+    .navlinks{display:none}
+    .navlinks.open{display:flex;position:absolute;top:74px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 28px;gap:18px;border-bottom:1px solid var(--line)}
+    .menu-btn{display:flex}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 32 32" fill="none"><path d="M16 3L4 12v17h8v-9h8v9h8V12L16 3z" fill="#1F4739"/><circle cx="16" cy="9" r="2" fill="#C56A3E"/></svg>
+      Happy Places
+    </a>
+    <div class="navlinks" id="nav">
+      <a href="index.html#difference">Why Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#markets">Where We Are</a>
+      <a href="index.html#story">About</a>
+      <a href="host-resources.html" style="color:var(--pine)">Host Resources</a>
+      <a href="index.html#eval" class="navcta">Free Evaluation</a>
+    </div>
+    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Host Resources</span>
+    <h1>The gear we actually use in our own homes.</h1>
+    <p>After years of outfitting short-term rentals, we know what earns five-star reviews and what ends up in a drawer. These are the essentials we recommend to every host, from the smart locks that make check-in effortless to the small touches guests remember.</p>
+  </div>
+</section>
+
+<div class="disclosure">
+  <div class="wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <span>As an Amazon Associate, Happy Places earns from qualifying purchases. This is at no additional cost to you.</span>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <!-- CATEGORY: Check-in & Security -->
+    <div class="cat">
+      <div class="cat-head"><h2>Check-in &amp; Security</h2><span>Effortless arrivals, protected property</span></div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-img"><img src="assets/products/smart-lock.png" alt="Smart lock with keypad" loading="lazy"></div>
+          <div class="card-body"><h4>Smart lock with keypad</h4><p>Keyless entry with a custom code per guest. The single best upgrade for smooth self check-in and security between stays.</p><a class="amz" href="https://link.amazon/B0buwmSdu" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/camera.png" alt="Outdoor security camera" loading="lazy"></div>
+          <div class="card-body"><h4>Outdoor security camera</h4><p>An exterior camera at the entry protects your property and gives guests peace of mind. Never place cameras indoors.</p><a class="amz" href="https://link.amazon/B0iYP4LYJ" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/noise.png" alt="Noise monitor" loading="lazy"></div>
+          <div class="card-body"><h4>Noise monitor</h4><p>A privacy-safe decibel monitor alerts you to parties before they become a problem, without recording any audio.</p><a class="amz" href="https://link.amazon/B03xSuadP" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY: Bedroom & Bath -->
+    <div class="cat">
+      <div class="cat-head"><h2>Bedroom &amp; Bath</h2><span>The comfort guests rate you on</span></div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-img"><img src="assets/products/sheets.png" alt="Hotel-quality white sheets" loading="lazy"></div>
+          <div class="card-body"><h4>Hotel-quality white sheets</h4><p>Crisp white bedding reads as clean and premium in photos and in person. Buy multiple sets for fast turnovers.</p><a class="amz" href="https://link.amazon/B01BIwQnI" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/towels.png" alt="Plush white towel set" loading="lazy"></div>
+          <div class="card-body"><h4>Plush white towel set</h4><p>Thick, absorbent white towels in matching sets. Guests notice thin towels immediately, and mention them in reviews.</p><a class="amz" href="https://link.amazon/B08TSnlgW" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/toiletry.png" alt="Toiletry &amp; amenity refills" loading="lazy"></div>
+          <div class="card-body"><h4>Toiletry &amp; amenity refills</h4><p>Bulk shampoo, conditioner, and hand soap in refillable dispensers, plus stocked paper goods for every stay.</p><a class="amz" href="https://amzn.to/4ArtU5y" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY: Kitchen -->
+    <div class="cat">
+      <div class="cat-head"><h2>Kitchen &amp; Coffee</h2><span>More than four forks</span></div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-img"><img src="assets/products/coffee.png" alt="Coffee maker with pods" loading="lazy"></div>
+          <div class="card-body"><h4>Coffee maker with pods</h4><p>A reliable single-serve brewer plus a starter stash of pods is a guest favorite and an easy five-star touch.</p><a class="amz" href="https://amzn.to/3ThQXiv" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/cookware.png" alt="Complete cookware set" loading="lazy"></div>
+          <div class="card-body"><h4>Complete cookware set</h4><p>A full set of pots, pans, and utensils so guests can actually cook. Under-equipped kitchens are a common complaint.</p><a class="amz" href="https://link.amazon/B0drLGalj" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/dinnerware.png" alt="Dinnerware for a full house" loading="lazy"></div>
+          <div class="card-body"><h4>Dinnerware for a full house</h4><p>Matching plates, bowls, glasses, and flatware for at least your max occupancy, with a few spares for breakage.</p><a class="amz" href="https://link.amazon/B0ezUGacj" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY: Comfort & Extras -->
+    <div class="cat">
+      <div class="cat-head"><h2>Comfort &amp; Little Touches</h2><span>What turns a stay into a review</span></div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-img"><img src="assets/products/tv.png" alt="Smart TV with streaming" loading="lazy"></div>
+          <div class="card-body"><h4>Smart TV with streaming</h4><p>A smart TV lets guests sign into their own streaming accounts. Add a simple guide for logging out at checkout.</p><a class="amz" href="https://link.amazon/B0j4L9akd" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/wifi.png" alt="Wi-Fi mesh system" loading="lazy"></div>
+          <div class="card-body"><h4>Wi-Fi mesh system</h4><p>Strong, reliable Wi-Fi in every room. It is a top-five guest priority and essential for remote-work travelers.</p><a class="amz" href="https://link.amazon/B014PHxZ8" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+        <div class="card">
+          <div class="card-img"><img src="assets/products/welcome.png" alt="Welcome basket supplies" loading="lazy"></div>
+          <div class="card-body"><h4>Welcome basket supplies</h4><p>Snacks, local treats, and a handwritten note. Small first impressions drive an outsized share of five-star reviews.</p><a class="amz" href="https://amzn.to/4y7mcfj" target="_blank" rel="noopener sponsored">View on Amazon</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<section class="backcta">
+  <div class="wrap">
+    <h3>Rather have us handle all of it?</h3>
+    <p>Outfitting and running a short-term rental is a lot of work. We do every piece of it, so you do not have to.</p>
+    <a href="index.html#eval" class="btn btn-primary btn-lg">Get your free evaluation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom">
+      <div class="foot-brand">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 3L4 12v17h8v-9h8v9h8V12L16 3z" fill="#fff"/><circle cx="16" cy="9" r="2" fill="#C56A3E"/></svg>
+        Happy Places
+      </div>
+      <span>&copy; 2026 Happy Places, LLC &middot; Arizona &amp; Tennessee</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
